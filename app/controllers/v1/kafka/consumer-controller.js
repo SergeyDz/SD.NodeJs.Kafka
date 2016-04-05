@@ -14,7 +14,7 @@ function get(req, res, next) {
                 { topic: 't0', partition: 0 }
             ],
             {
-                autoCommit: false
+                autoCommit: true
             }
             );
 
