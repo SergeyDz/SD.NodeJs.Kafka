@@ -1,5 +1,3 @@
-var kafka = require('kafka')
-
 function ConsumerController() {
 }
 
