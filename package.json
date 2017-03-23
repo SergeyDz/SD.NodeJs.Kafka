@@ -29,6 +29,6 @@
     "body-parser": "^1.15.0",
     "cluster-service": "^2.0.0-alpha4",
     "express": "^4.13.4",
-    "kafka-node": "~0.3.2"
+    "kafka-node": "latest"
   }
 }

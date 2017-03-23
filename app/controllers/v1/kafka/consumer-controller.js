@@ -5,11 +5,11 @@ function get(req, res, next) {
 
     var kafka = require('kafka-node'),
         Consumer = kafka.Consumer,
-        client = new kafka.Client("10.1.0.178:2181,10.1.0.200:2181,10.1.1.49:2181/kafka", "client-01", { sessionTimeout: 3000 }),
+        client = new kafka.Client("10.1.1.231:2181,10.1.1.232:2181,10.1.1.233:2181/kafka", "client-02", { sessionTimeout: 5000 }),
         consumer = new Consumer(
             client,
             [
-                { topic: 't0', partition: 0 }
+                { topic: 'entities', partition: 0 }
             ],
             {
                 autoCommit: true
@@ -19,7 +19,7 @@ function get(req, res, next) {
     consumer.on('message', function (message) {
         console.log(message);
     });
-    
+
      res.status(200).json({ status: "Ok" });
 }
 
